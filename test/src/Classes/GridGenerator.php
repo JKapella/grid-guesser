@@ -37,4 +37,10 @@ class GridGeneratorTest extends Testcase
         $winningSquare = $grid->getWinningSquareValue();
         $this->assertLessThanOrEqual($expected, $winningSquare['x']);
     }
+
+    public function testWinningGenerationMalformed() {
+        $input = 'Cheese';
+        $this->expectException(TypeError::Class);
+        $grid = new \guesserApplication\Classes\GridGenerator($input, $input);
+    }
 }

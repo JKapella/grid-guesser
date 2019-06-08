@@ -6,6 +6,7 @@ class GridGenerator
 {
     private $winningSquare;
     private $maxGridSize = 50;
+    private $minGridSize = 2;
 
     public function __construct($maxXVal, $maxYVal)
     {
@@ -13,12 +14,14 @@ class GridGenerator
     }
 
     private function generateWinningSquare(int $maxXVal, int $maxYVal) : array {
-        $maxXVal = $maxXVal < 2 ? 2 : $maxXVal;
-        $maxYVal = $maxYVal < 2 ? 2 : $maxYVal;
-        $maxYVal = $maxYVal > $this->maxGridSize ? $this->maxGridSize : $maxYVal;
-        $maxXVal = $maxXVal > $this->maxGridSize ? $this->maxGridSize : $maxXVal;
-        $winningSquareX = rand (2, $maxXVal);
-        $winningSquareY = rand (2 ,$maxYVal);
+        $minGridSize = $this->minGridSize;
+        $maxGridSize = $this->maxGridSize;
+        $maxXVal = $maxXVal < $minGridSize ? $minGridSize : $maxXVal;
+        $maxYVal = $maxYVal < $minGridSize ? $minGridSize : $maxYVal;
+        $maxYVal = $maxYVal > $maxGridSize ? $maxGridSize : $maxYVal;
+        $maxXVal = $maxXVal > $maxGridSize ? $maxGridSize : $maxXVal;
+        $winningSquareX = rand ($minGridSize, $maxXVal);
+        $winningSquareY = rand ($minGridSize ,$maxYVal);
         return ['x' => $winningSquareX, 'y' => $winningSquareY];
     }
 

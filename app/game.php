@@ -1,21 +1,13 @@
 <?php
 
 require_once('../src/functions.php');
-require_once __DIR__ . '../vendor/autoload.php';
+require_once('../vendor/autoload.php');
 
 if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
     $requestedWidth =  $_POST['widthValue'];
     $requestedHeight = $_POST['heightValue'];
-    $minGridValue = 2;
-    $maxGridValue = 20;
-    if ($requestedWidth > $minGridValue && $requestedHeight > $maxGridValue &&
-        $requestedWidth < $maxGridValue && $requestedHeight < $maxGridValue) {
-
-        $grid = new \guesserApplication\Classes\GridGenerator($requestedWidth, $requestedHeight);
-
-    } else {
-        header('Location: index.php');
-    }
+    $grid = new \guesserApplication\Classes\GridGenerator($requestedWidth, $requestedHeight);
+    var_dump($grid);
 } else {
     header('Location: index.php');
 }
