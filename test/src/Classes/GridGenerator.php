@@ -27,9 +27,14 @@ class GridGeneratorTest extends Testcase
         $winningSquare = $grid->getWinningSquareValue();
         $this->assertEquals($expected, $winningSquare['x']);
     }
-//
-//    public function testWinningGenerationTooLargeFailure()
-//    {
-//
-//    }
+
+    public function testWinningGenerationTooLargeFailure()
+    {
+        $inputWidth = 100;
+        $inputHeight = 2;
+        $expected = 50;
+        $grid = new \guesserApplication\Classes\GridGenerator($inputWidth, $inputHeight);
+        $winningSquare = $grid->getWinningSquareValue();
+        $this->assertLessThanOrEqual($expected, $winningSquare['x']);
+    }
 }
