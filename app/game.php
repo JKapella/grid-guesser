@@ -8,8 +8,6 @@
 </head>
 
 <body>
-    <main>
-        <h2>Select a square!</h2>
-        <div id='gridContainer'></div>
-    </main>
+    <h2>Select a square!</h2>
+    <main id='gridContainer'></main>
 </body>
