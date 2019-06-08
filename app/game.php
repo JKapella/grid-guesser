@@ -1,6 +1,5 @@
 <?php
 
-require_once('../src/functions.php');
 require_once('../vendor/autoload.php');
 
 if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
