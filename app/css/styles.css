@@ -8,4 +8,5 @@
   cursor: pointer; }
 
 .grid-row {
-  height: 20px; }
+  height: 20px;
+  user-select: none; }
