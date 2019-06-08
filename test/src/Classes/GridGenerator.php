@@ -8,28 +8,27 @@ class GridGeneratorTest extends Testcase
 {
     public function testWinningGenerationSuccess()
     {
-        $inputWidth = 5;
-        $inputHeight = 5;
-        $expectedWidthMax = 5;
-        $expectedHeightMax = 5;
-        $case = generateWinningSquare($inputWidth , $inputHeight);
-        $this->assertLessThanOrEqual($expectedWidthMax, $case['x']);
-        $this->assertGreaterThanOrEqual(2, $case['x']);
-        $this->assertLessThanOrEqual($expectedHeightMax, $case['y']);
-        $this->assertGreaterThanOrEqual(2, $case['y']);
+        $input = 5;
+        $expected = 5;
+        $grid = new \guesserApplication\Classes\GridGenerator($input, $input);
+        $winningSquare = $grid->getWinningSquareValue();
+        $this->assertLessThanOrEqual($expected, $winningSquare['x']);
+        $this->assertGreaterThanOrEqual(2, $winningSquare['x']);
+        $this->assertLessThanOrEqual($expected, $winningSquare['y']);
+        $this->assertGreaterThanOrEqual(2, $winningSquare['y']);
     }
 
-    public function testWinningGenerationNegativeFailure()
-    {
-        $inputWidth = -1;
-        $inputHeight = 2;
-        $expected = 2;
-        $case = generateWinningSquare($inputWidth , $inputHeight);
-        $this->assertEquals($expected, $case['x']);
-    }
-
-    public function testWinningGenerationTooLargeFailure()
-    {
-
-    }
+//    public function testWinningGenerationNegativeFailure()
+//    {
+//        $inputWidth = -1;
+//        $inputHeight = 2;
+//        $expected = 2;
+//        $case = generateWinningSquare($inputWidth , $inputHeight);
+//        $this->assertEquals($expected, $case['x']);
+//    }
+//
+//    public function testWinningGenerationTooLargeFailure()
+//    {
+//
+//    }
 }
