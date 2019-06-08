@@ -32,4 +32,20 @@ class GridGenerator
     public function getWinningSquareValue() {
         return $this->winningSquare;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getGridX()
+    {
+        return $this->gridX;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGridY()
+    {
+        return $this->gridY;
+    }
 }
