@@ -25,7 +25,7 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
     <header>
         <h2>Select a square!</h2>
         <h2 id='guess-counter' class='counter' data-guess='0'>Guesses so far: 0</h2>
-        <p>(The number in a clicked square indicates how far from the winner you are)</p>
+        <p>The number in a clicked square indicates how far from the winner you are - diagonals are included</p>
     </header>
     <main>
         <?php

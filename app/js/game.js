@@ -16,23 +16,28 @@ function incrementGuessCounter() {
 }
 
 function squareIsClicked(event) {
-    let distanceToWinner = event.target.dataset.dist
+    var square = event.target
+    let distanceToWinner = square.dataset.dist
     event.target.textContent = distanceToWinner
     if (distanceToWinner == 0) {
-        event.target.classList.add('grid-square-winner');
-        event.target.classList.remove('grid-square-unclicked');
-        winGame()
+        winGame(square)
     } else {
-        incrementGuessCounter()
-        let oldElement = event.target
-        let newElement = event.target.cloneNode(true)
-        newElement.classList.add('grid-square-clicked')
-        newElement.classList.remove('grid-square-unclicked')
-        oldElement.parentNode.replaceChild(newElement, oldElement)
+        setSquareAsCompleted(square)
+        incrementGuessCounter(square)
     }
 }
 
-function winGame() {
+function setSquareAsCompleted(square) {
+    let oldElement = square
+    let newElement = square.cloneNode(true)
+    newElement.classList.add('grid-square-clicked')
+    newElement.classList.remove('grid-square-unclicked')
+    oldElement.parentNode.replaceChild(newElement, oldElement)
+}
+
+function winGame(square) {
+    square.classList.add('grid-square-winner');
+    square.classList.remove('grid-square-unclicked');
     window.addEventListener('click', function (event) {
         event.stopPropagation()
     }, true)
