@@ -10,13 +10,28 @@ class GridGenerator
     private $gridX;
     private $gridY;
 
-    public function __construct($maxXVal, $maxYVal)
+    /**
+     * GridGenerator constructor.
+     * 
+     * @param $maxXVal - the desired width of the 'game grid' to be stored and to generate the winning square
+     * @param $maxYVal - the desired height of the 'game grid' to be stored and to generate the winning square
+     */
+    public function __construct(int $maxXVal, int $maxYVal)
     {
         $this->winningSquare = $this->generateWinningSquare($maxXVal, $maxYVal);
         $this->gridX = $maxXVal;
         $this->gridY = $maxYVal;
     }
 
+    /**
+     * Randomly generates a 'winning' square from the min and max values provided, will correct input that is
+     * too large or too small
+     *
+     * @param int $maxXVal - the width provided by the user, must be within limits, or will be corrected
+     * @param int $maxYVal - the height provided by the user, must be within limits, or will be corrected
+     *
+     * @return array - the 'coordinates' of the winning square, as an array of two ints
+     */
     private function generateWinningSquare(int $maxXVal, int $maxYVal) : array {
         $minGridSize = $this->minGridSize;
         $maxGridSize = $this->maxGridSize;
@@ -29,23 +44,30 @@ class GridGenerator
         return ['x' => $winningSquareX, 'y' => $winningSquareY];
     }
 
-    public function getWinningSquareValue() {
+    /**
+     * A public getter for the 'coordinates' (x and y int values, in an array) of the 'target' square
+     *
+     * @return array
+     */
+    public function getWinningSquareValue() :array {
         return $this->winningSquare;
     }
 
     /**
-     * @return mixed
+     * A public getter for the 'x' (width value of the generated grid)
+     *
+     * @return int
      */
-    public function getGridX()
-    {
+    public function getGridX() :int {
         return $this->gridX;
     }
 
     /**
-     * @return mixed
+     * A public getter for the 'y' (height value of the generated grid)
+     *
+     * @return int
      */
-    public function getGridY()
-    {
+    public function getGridY() :int {
         return $this->gridY;
     }
 }
