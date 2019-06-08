@@ -15,6 +15,7 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
 <head>
     <meta charset="utf-8">
     <title>Grid Guesser</title>
+    <link rel='stylesheet' href='css/styles.css'>
 </head>
 
 <body>
