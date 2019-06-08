@@ -19,5 +19,7 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
 
 <body>
     <h2>Select a square!</h2>
-    <main id='gridContainer'></main>
+    <main id='gridContainer'>
+        <?= \guesserApplication\Classes\GridHtmlCreator::createHTML($grid) ?>
+    </main>
 </body>
