@@ -19,4 +19,11 @@ class GridHtmlGeneratorTest extends Testcase
         $case = \guesserApplication\Classes\GridHtmlCreator::createHTML($grid);
         $this->assertEquals($expected, $case);
     }
+
+    public function testHtmlGenerationMalformed()
+    {
+        $input = 5;
+        $this->expectException(Error::Class);
+        $grid = \guesserApplication\Classes\GridHtmlCreator::createHTML($input);
+    }
 }
