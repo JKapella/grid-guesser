@@ -15,8 +15,9 @@ class GridHtmlCreator
         $output = '';
         for ($y = 1; $y <= $yRows; $y++) {
             for ($x = 1; $x <= $xRows; $x++) {
-
-                $distance = 1;
+                $yDist = abs($y - $winY);
+                $xDist = abs($x - $winX);
+                $distance = abs($yDist - $xDist);
                 $output .= "<div class='grid-square' data-dist='" . $distance . "'></div>";
             }
         }
