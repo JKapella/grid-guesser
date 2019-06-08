@@ -8,9 +8,9 @@
 </head>
 
 <body>
-<h1>Grid Guesser</h1>
-<main>
-    <h3>Select a square!</h3>
-    <main></main>
-</main>
+    <h1>Grid Guesser</h1>
+    <main>
+        <h3>Select a square!</h3>
+        <div id='gridContainer'></div>
+    </main>
 </body>
