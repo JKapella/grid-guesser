@@ -10,6 +10,8 @@ function setEventListeners() {
 
 function squareIsClicked(event) {
     console.log(event.target)
+    let dist = event.target.dataset.dist
+    event.target.textContent = dist
 }
 
 setEventListeners()
