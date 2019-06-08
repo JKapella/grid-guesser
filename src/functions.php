@@ -7,3 +7,4 @@ function generateWinningSquare(int $maxXVal, int $maxYVal) : array {
     $winningSquareY = rand (2 ,$maxYVal);
     return ['x' => $winningSquareX, 'y' => $winningSquareY];
 }
+

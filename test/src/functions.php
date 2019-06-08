@@ -27,4 +27,9 @@ class StackTest extends Testcase
         $case = generateWinningSquare($inputWidth , $inputHeight);
         $this->assertEquals($expected, $case['x']);
     }
+
+    public function testWinningGenerationTooLargeFailure()
+    {
+
+    }
 }
