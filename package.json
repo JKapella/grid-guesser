@@ -1,0 +1,25 @@
+{
+  "name": "grid-guesser",
+  "version": "1.0.0",
+  "description": "A simple guessing game app",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "sass": "^1.21.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JKapella/grid-guesser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JKapella/grid-guesser/issues"
+  },
+  "homepage": "https://github.com/JKapella/grid-guesser#readme"
+}
