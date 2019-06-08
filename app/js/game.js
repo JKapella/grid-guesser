@@ -1,5 +1,5 @@
 function setEventListeners() {
-    let squares = document.querySelectorAll('.grid-square');
+    let squares = document.querySelectorAll('.grid-square')
     squares.forEach(square => {
         square.addEventListener('click', e => {
             squareIsClicked(e)
@@ -40,8 +40,8 @@ function setSquareAsCompleted(square) {
 }
 
 function winGame(square) {
-    square.classList.add('grid-square-winner');
-    square.classList.remove('grid-square-unclicked');
+    square.classList.add('grid-square-winner')
+    square.classList.remove('grid-square-unclicked')
     window.addEventListener('click', function (event) {
         event.stopPropagation()
     }, true)
