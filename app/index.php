@@ -15,7 +15,7 @@
     <h1>Grid Guesser</h1>
     <section>
         <p>Find the hidden square...</p>
-        <p>Select your grid size (it can be between 2 and 50 squares per side)</p>
+        <p>Select your grid size (it can be between 2 and 13 squares per side)</p>
         <form id='form' action='game.php' method='post'>
             Give me a grid
             <input id='width' type='text' name='widthValue' maxlength='2' size='2'>

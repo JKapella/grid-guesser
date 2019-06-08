@@ -16,7 +16,6 @@ body {
 h1, h2  {
   text-align: center;
   font-family: 'Oswald', sans-serif;
-  padding: 40px;
 }
 
 h1 {
@@ -24,11 +23,15 @@ h1 {
   font-size: 5rem;
   margin: 50px auto 0 auto;
   border-bottom: $border;
+  padding: 40px;
 }
 
 h2 {
   display: inline-block;
   font-size: 2.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 header {
@@ -37,6 +40,12 @@ header {
   border-bottom: $border;
   .counter {
     float: right;
+  }
+  p {
+    font-size: 1.5rem;
+    font-family: 'EB Garamond', serif;
+    text-align: center;
+    margin: 10px;
   }
 }
 

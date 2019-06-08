@@ -7,18 +7,21 @@ body {
 
 h1, h2 {
   text-align: center;
-  font-family: 'Oswald', sans-serif;
-  padding: 40px; }
+  font-family: 'Oswald', sans-serif; }
 
 h1 {
   width: 800px;
   font-size: 5rem;
   margin: 50px auto 0 auto;
-  border-bottom: 2px solid #e3e3e3; }
+  border-bottom: 2px solid #e3e3e3;
+  padding: 40px; }
 
 h2 {
   display: inline-block;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px; }
 
 header {
   width: 800px;
@@ -26,6 +29,11 @@ header {
   border-bottom: 2px solid #e3e3e3; }
   header .counter {
     float: right; }
+  header p {
+    font-size: 1.5rem;
+    font-family: 'EB Garamond', serif;
+    text-align: center;
+    margin: 10px; }
 
 section {
   border: 2px solid #e3e3e3;

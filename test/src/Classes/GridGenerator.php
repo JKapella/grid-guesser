@@ -32,7 +32,7 @@ class GridGeneratorTest extends Testcase
     {
         $inputWidth = 100;
         $inputHeight = 2;
-        $expected = 50;
+        $expected = 13;
         $grid = new \guesserApplication\Classes\GridGenerator($inputWidth, $inputHeight);
         $winningSquare = $grid->getWinningSquareValue();
         $this->assertLessThanOrEqual($expected, $winningSquare['x']);

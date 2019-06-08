@@ -5,7 +5,7 @@ namespace guesserApplication\Classes;
 class GridGenerator
 {
     private $winningSquare;
-    private $maxGridSize = 50;
+    private $maxGridSize = 13;
     private $minGridSize = 2;
     private $gridX;
     private $gridY;
