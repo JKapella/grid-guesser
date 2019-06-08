@@ -41,6 +41,7 @@ function winGame(square) {
     window.addEventListener('click', function (event) {
         event.stopPropagation()
     }, true)
+    document.getElementById('win-banner').style.display = 'block'
 }
 
 setEventListeners()
