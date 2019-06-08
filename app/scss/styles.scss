@@ -1,8 +1,9 @@
 .grid-square {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #FFFFFF;
   background-color: black;
-  float: left;
+  display: inline-block;
   color: #FFFFFF;
   text-align: center;
   cursor: pointer;
@@ -11,4 +12,6 @@
 .grid-row {
   height: 30px;
   user-select: none;
+  text-align: center;
+  margin: 0 auto;
 }
