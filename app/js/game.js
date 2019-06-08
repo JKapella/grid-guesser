@@ -8,10 +8,22 @@ function setEventListeners() {
     })
 }
 
+function incrementGuessCounter() {
+    let counter = document.getElementById('guess-counter')
+    let guesses = counter.dataset.guess
+    guesses++
+    counter.dataset.guess = guesses
+    counter.textContent = 'Guesses so far: ' + guesses
+}
+
 function squareIsClicked(event) {
-    console.log(event.target)
     let distanceToWinner = event.target.dataset.dist
     event.target.textContent = distanceToWinner
+    if (distanceToWinner === 0) {
+        
+    } else {
+        incrementGuessCounter()
+    }
 }
 
 setEventListeners()

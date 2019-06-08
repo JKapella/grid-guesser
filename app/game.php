@@ -22,7 +22,8 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
 
 <body>
     <h2>Select a square!</h2>
-    <main id='gridContainer'>
+    <h2 id='guess-counter' data-guess='0'>Guesses so far: 0</h2>
+    <main>
         <?php
             if (isset($grid)) {
                 echo \guesserApplication\Classes\GridHtmlCreator::createHTML($grid);
