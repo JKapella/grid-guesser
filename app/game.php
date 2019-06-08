@@ -20,6 +20,12 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
 <body>
     <h2>Select a square!</h2>
     <main id='gridContainer'>
-        <?= \guesserApplication\Classes\GridHtmlCreator::createHTML($grid) ?>
+        <?php
+            if (isset($grid)) {
+                echo \guesserApplication\Classes\GridHtmlCreator::createHTML($grid);
+            } else {
+                echo 'Error: Unable to generate grid!';
+            }
+        ?>
     </main>
 </body>
