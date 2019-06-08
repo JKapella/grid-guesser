@@ -19,15 +19,19 @@ function squareIsClicked(event) {
     let distanceToWinner = event.target.dataset.dist
     event.target.textContent = distanceToWinner
     if (distanceToWinner == 0) {
-        window.addEventListener('click', function (event) {
-            event.stopPropagation();
-        }, true);
+        winGame()
     } else {
         incrementGuessCounter()
-        let oldElement = event.target;
-        let newElement = event.target.cloneNode(true);
-        oldElement.parentNode.replaceChild(newElement, oldElement);
+        let oldElement = event.target
+        let newElement = event.target.cloneNode(true)
+        oldElement.parentNode.replaceChild(newElement, oldElement)
     }
+}
+
+function winGame() {
+    window.addEventListener('click', function (event) {
+        event.stopPropagation()
+    }, true)
 }
 
 setEventListeners()
