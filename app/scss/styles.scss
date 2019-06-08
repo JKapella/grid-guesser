@@ -1,10 +1,59 @@
+$font-color: #e3e3e3;
+$border: 2px solid $font-color;
+
+body {
+  background: #000000;
+  font-size: 16px;
+  font-family: Impact, Charcoal, sans-serif;
+  user-select: none;
+  color: $font-color;
+}
+
+h1, h2  {
+  text-align: center;
+  border-bottom: 2px solid $font-color;
+  font-size: 5rem;
+  width: 800px;
+  margin: 50px auto 0 auto;
+  font-family: 'Oswald', sans-serif;
+  padding: 40px;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+section {
+  border: $border;
+  width: 800px;
+  margin: 50px auto;
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  p {
+    font-size: 1.5rem;
+  }
+  div {
+    height: 60px;
+    color: #FF0000;
+    padding-top: 20px;
+    font-size: 1.5rem;
+  }
+  form {
+    font-size: 1.5rem;
+  }
+}
+
 .grid-square {
   width: 40px;
   height: 40px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid $font-color;
   background-color: black;
   display: inline-block;
-  color: #FFFFFF;
+  color: $font-color;
   text-align: center;
   cursor: pointer;
 }

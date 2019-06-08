@@ -15,14 +15,17 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
 <head>
     <meta charset="utf-8">
     <title>Grid Guesser</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Oswald&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='css/normalize.css'>
     <link rel='stylesheet' href='css/styles.css'>
     <script type='text/javascript' src='js/game.js' defer></script>
 </head>
 
 <body>
-    <h2>Select a square!</h2>
-    <h2 id='guess-counter' data-guess='0'>Guesses so far: 0</h2>
+    <header>
+        <h2>Select a square!</h2>
+        <h2 id='guess-counter' data-guess='0'>Guesses so far: 0</h2>
+    </header>
     <main>
         <?php
             if (isset($grid)) {
