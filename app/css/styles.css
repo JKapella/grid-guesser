@@ -4,7 +4,8 @@
   background-color: black;
   float: left;
   color: #FFFFFF;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
 
 .grid-row {
   height: 20px; }
