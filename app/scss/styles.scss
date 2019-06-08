@@ -73,24 +73,32 @@ section {
   }
   form {
     font-size: 1.5rem;
+    input {
+      background-color: $background-color;
+      border: $border;
+      color: $font-color;
+    }
   }
 }
 
 nav {
   text-align: center;
   position: fixed;
-  top: 40%;
+  top: 0;
   width: 100%;
   border: $border;
-  padding: 50px;
+  padding: 10px;
   background-color: $background-color;
   display: none;
-  transition: 1s;
-  transition-delay: 1s;
   form {
     font-size: 1.3rem;
     font-family: 'EB Garamond', serif;
     margin: 10px;
+    input {
+      background-color: $background-color;
+      border: $border;
+      color: $font-color;
+    }
   }
 }
 

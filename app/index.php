@@ -23,7 +23,7 @@
             <input id='height' type='text' name='heightValue' maxlength='2' size='2'>
             squares high.
             <div id='errorField'></div>
-            <input type='submit'>
+            <input type='submit' value='Lets Go!'>
         </form>
     </section>
 </body>

@@ -37,7 +37,7 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
         ?>
     </main>
     <nav id='win-banner'>
-        <h3>You found it in X attempts!</h3>
+        <h3 id='win-text'>You found it in X attempts!</h3>
         <form action='index.php'>
             <input type='submit' value='Try Again?'>
         </form>

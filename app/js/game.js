@@ -12,7 +12,10 @@ function incrementGuessCounter() {
     let guesses = counter.dataset.guess
     guesses++
     counter.dataset.guess = guesses
+    let winMessage = document.getElementById('win-text')
+    winMessage.textContent = 'You found it in ' + guesses + ' attempts!'
     counter.textContent = 'Guesses so far: ' + guesses
+
 }
 
 function squareIsClicked(event) {
@@ -20,6 +23,7 @@ function squareIsClicked(event) {
     let distanceToWinner = square.dataset.dist
     event.target.textContent = distanceToWinner
     if (distanceToWinner == 0) {
+        incrementGuessCounter(square)
         winGame(square)
     } else {
         setSquareAsCompleted(square)
