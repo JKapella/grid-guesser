@@ -1,6 +1,7 @@
 <?php
 
 require_once('../src/functions.php');
+require_once __DIR__ . '../vendor/autoload.php';
 
 if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
     $requestedWidth =  $_POST['widthValue'];
@@ -9,7 +10,8 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
     $maxGridValue = 20;
     if ($requestedWidth > $minGridValue && $requestedHeight > $maxGridValue &&
         $requestedWidth < $maxGridValue && $requestedHeight < $maxGridValue) {
-        $winningSquare = generateWinningSquare($requestedWidth, $requestedHeight);
+
+        $grid = new \guesserApplication\Classes\GridGenerator($requestedWidth, $requestedHeight);
 
     } else {
         header('Location: index.php');
