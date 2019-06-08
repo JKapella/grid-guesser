@@ -9,7 +9,8 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
     $maxGridValue = 20;
     if ($requestedWidth > $minGridValue && $requestedHeight > $maxGridValue &&
         $requestedWidth < $maxGridValue && $requestedHeight < $maxGridValue) {
-        //get a grid
+        $winningSquare = generateWinningSquare($requestedWidth, $requestedHeight);
+
     } else {
         header('Location: index.php');
     }
