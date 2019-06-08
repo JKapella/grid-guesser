@@ -7,10 +7,14 @@ class GridGenerator
     private $winningSquare;
     private $maxGridSize = 50;
     private $minGridSize = 2;
+    private $gridX;
+    private $gridY;
 
     public function __construct($maxXVal, $maxYVal)
     {
         $this->winningSquare = $this->generateWinningSquare($maxXVal, $maxYVal);
+        $this->gridX = $maxXVal;
+        $this->gridY = $maxYVal;
     }
 
     private function generateWinningSquare(int $maxXVal, int $maxYVal) : array {

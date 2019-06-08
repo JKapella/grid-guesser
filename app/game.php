@@ -6,7 +6,6 @@ if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
     $requestedWidth =  $_POST['widthValue'];
     $requestedHeight = $_POST['heightValue'];
     $grid = new \guesserApplication\Classes\GridGenerator($requestedWidth, $requestedHeight);
-    var_dump($grid);
 } else {
     header('Location: index.php');
 }
