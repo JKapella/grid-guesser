@@ -5,7 +5,7 @@ require_once('../src/functions.php');
 if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
     $requestedWidth =  $_POST['widthValue'];
     $requestedHeight = $_POST['heightValue'];
-    $minGridValue = 1;
+    $minGridValue = 2;
     $maxGridValue = 20;
     if ($requestedWidth > $minGridValue && $requestedHeight > $maxGridValue &&
         $requestedWidth < $maxGridValue && $requestedHeight < $maxGridValue) {

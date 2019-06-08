@@ -14,13 +14,13 @@ class StackTest extends Testcase
         $expectedHeightMax = 5;
         $case = generateWinningSquare($inputWidth , $inputHeight);
         $this->assertLessThanOrEqual($expectedWidthMax, $case['x']);
-        $this->assertGreaterThanOrEqual(1, $case['x']);
+        $this->assertGreaterThanOrEqual(2, $case['x']);
         $this->assertLessThanOrEqual($expectedHeightMax, $case['y']);
-        $this->assertGreaterThanOrEqual(1, $case['y']);
+        $this->assertGreaterThanOrEqual(2, $case['y']);
     }
 
-//    public function testWinningGenerationNegativeFailure()
-//    {
-//
-//    }
+    public function testWinningGenerationNegativeFailure()
+    {
+
+    }
 }
