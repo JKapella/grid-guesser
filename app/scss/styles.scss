@@ -2,6 +2,8 @@ $font-color: #e3e3e3;
 $border: 2px solid $font-color;
 $square-size: 50px;
 $backgroundColor: #000000;
+$selected-color: #FFD700;
+$winner-color: #0f9600;
 
 body {
   background: #000000;
@@ -75,7 +77,14 @@ section {
 }
 
 .grid-square-clicked {
-  color: #0f9600;
+  color: $selected-color;
+  border: 2px solid $selected-color;
+}
+
+.grid-square-winner {
+  color: $backgroundColor;
+  border: 2px solid $winner-color;
+  background: $winner-color;
 }
 
 .grid-square-unclicked:hover {

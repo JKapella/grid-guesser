@@ -20,7 +20,7 @@ class GridHtmlCreator
                 $xDist = abs($x - $winX);
                 $distance = max($yDist, $xDist);
 
-                $output .= "<div class='grid-square' data-dist='" . $distance . "'>X</div>";
+                $output .= "<div class='grid-square grid-square-unclicked' data-dist='" . $distance . "'>X</div>";
             }
             $output .= "</div>";
         }

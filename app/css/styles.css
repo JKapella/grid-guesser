@@ -58,7 +58,13 @@ section {
   border: 2px solid #e3e3e3; }
 
 .grid-square-clicked {
-  color: #0f9600; }
+  color: #FFD700;
+  border: 2px solid #FFD700; }
+
+.grid-square-winner {
+  color: #000000;
+  border: 2px solid #0f9600;
+  background: #0f9600; }
 
 .grid-square-unclicked:hover {
   background-color: #e3e3e3;
