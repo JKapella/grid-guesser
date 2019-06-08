@@ -21,6 +21,10 @@ class StackTest extends Testcase
 
     public function testWinningGenerationNegativeFailure()
     {
-
+        $inputWidth = -1;
+        $inputHeight = 2;
+        $expected = 2;
+        $case = generateWinningSquare($inputWidth , $inputHeight);
+        $this->assertEquals($expected, $case['x']);
     }
 }
