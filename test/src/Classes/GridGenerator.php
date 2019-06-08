@@ -18,14 +18,15 @@ class GridGeneratorTest extends Testcase
         $this->assertGreaterThanOrEqual(2, $winningSquare['y']);
     }
 
-//    public function testWinningGenerationNegativeFailure()
-//    {
-//        $inputWidth = -1;
-//        $inputHeight = 2;
-//        $expected = 2;
-//        $case = generateWinningSquare($inputWidth , $inputHeight);
-//        $this->assertEquals($expected, $case['x']);
-//    }
+    public function testWinningGenerationNegativeFailure()
+    {
+        $inputWidth = -1;
+        $inputHeight = 2;
+        $expected = 2;
+        $grid = new \guesserApplication\Classes\GridGenerator($inputWidth, $inputHeight);
+        $winningSquare = $grid->getWinningSquareValue();
+        $this->assertEquals($expected, $winningSquare['x']);
+    }
 //
 //    public function testWinningGenerationTooLargeFailure()
 //    {
