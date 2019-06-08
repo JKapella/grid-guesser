@@ -1,5 +1,7 @@
 <?php
 
+require_once('../src/functions.php');
+
 if (isset($_POST['widthValue']) && isset($_POST['heightValue'])) {
     $requestedWidth =  $_POST['widthValue'];
     $requestedHeight = $_POST['heightValue'];
