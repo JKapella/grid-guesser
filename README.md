@@ -3,7 +3,7 @@
 A simple guessing game app. Find the hidden winning square in a grid.
 
 
-##Tech used
+## Tech used
 
 * PHP 7.1 - for backend logic and templating
 * Composer - for autoloading PHP
@@ -12,7 +12,7 @@ A simple guessing game app. Find the hidden winning square in a grid.
 * PHPUnit - for unit tests
 * Gulp - as a task runner
 
-##Installing and running the app
+## Installing and running the app
 
 To simply install the app and get it running (see the section below if you want to do further development on it):
 
@@ -26,7 +26,7 @@ Navigate your browser within the project file to `/app/index.php`
 
 Have a play!
 
-##Further development on the app
+## Further development on the app
 
 For further development on the app I would additionally recommend:
 
@@ -36,7 +36,7 @@ For further development on the app I would additionally recommend:
   
 You can now use the Gulpfile included in the project to automatically generate your CSS files from SCSS - just use the command `gulp watch` in your project directory.
   
-##Tests
+## Tests
 
 Tests can be run with PHPUnit. If you've run `composer install` - Composer will have installed PHPUnit as a dependency.
 
