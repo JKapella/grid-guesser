@@ -1,0 +1,143 @@
+$font-color: #e3e3e3;
+$border: 2px solid $font-color;
+$square-size: 50px;
+$background-color: #000000;
+$selected-color: #FFD700;
+$winner-color: #0f9600;
+
+body {
+  background: #000000;
+  font-size: 16px;
+  font-family: Impact, Charcoal, sans-serif;
+  user-select: none;
+  color: $font-color;
+}
+
+h1, h2, h3  {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  width: 800px;
+  font-size: 5rem;
+  margin: 50px auto 0 auto;
+  border-bottom: $border;
+  padding: 40px;
+}
+
+h2 {
+  display: inline-block;
+  font-size: 2.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+h3  {
+  font-size: 2.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+header {
+  width: 800px;
+  margin: 0 auto 50px auto;
+  border-bottom: $border;
+  .counter {
+    float: right;
+  }
+  p {
+    font-size: 1.3rem;
+    font-family: 'EB Garamond', serif;
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+section {
+  border: $border;
+  width: 800px;
+  margin: 50px auto;
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  p {
+    font-size: 1.5rem;
+  }
+  div {
+    height: 60px;
+    color: #FF0000;
+    padding-top: 20px;
+    font-size: 1.5rem;
+  }
+  form {
+    font-size: 1.5rem;
+    input {
+      background-color: $background-color;
+      border: $border;
+      color: $font-color;
+    }
+  }
+}
+
+nav {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border: $border;
+  padding: 10px;
+  background-color: $background-color;
+  display: none;
+  form {
+    font-size: 1.3rem;
+    font-family: 'EB Garamond', serif;
+    margin: 10px;
+    input {
+      background-color: $background-color;
+      border: $border;
+      color: $font-color;
+    }
+  }
+}
+
+.grid-square {
+  width: $square-size;
+  height: $square-size;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: 0.5s;
+  padding-top: 4px;
+}
+
+.grid-square-unclicked {
+  color: $font-color;
+  border: $border;
+}
+
+.grid-square-clicked {
+  color: $selected-color;
+  border: 2px solid $selected-color;
+}
+
+.grid-square-winner {
+  color: $background-color;
+  border: 2px solid $winner-color;
+  background: $winner-color;
+}
+
+.grid-square-unclicked:hover {
+  background-color: $font-color;
+  color: $background-color;
+  border-color: $background-color;
+}
+
+.grid-row {
+  height: $square-size;
+  user-select: none;
+  text-align: center;
+  margin: 0 auto;
+}
